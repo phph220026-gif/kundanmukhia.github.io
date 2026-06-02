@@ -1,115 +1,500 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kundan Mukhia</title>
+
+<title>Kundan Mukhia | PhD Research Scholar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
 body{
-    font-family: Arial, sans-serif;
-    margin:0;
-    background:#f5f7fa;
-    color:#222;
+font-family:'Inter',sans-serif;
+background:#f8fafc;
+color:#1e293b;
+line-height:1.7;
 }
-header{
-    background:#0f172a;
-    color:white;
-    padding:60px 20px;
-    text-align:center;
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
 }
+
+nav{
+position:sticky;
+top:0;
+z-index:1000;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+font-size:1.4rem;
+font-weight:800;
+color:#0f172a;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#334155;
+font-weight:600;
+}
+
+.nav-links a:hover{
+color:#2563eb;
+}
+
+.hero{
+padding:70px 0;
+}
+
+.hero-card{
+background:white;
+border-radius:25px;
+padding:50px;
+display:flex;
+gap:50px;
+align-items:center;
+box-shadow:0 10px 40px rgba(0,0,0,.08);
+}
+
+.profile-img{
+width:230px;
+height:230px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid #2563eb;
+}
+
+.hero-text h1{
+font-size:3rem;
+color:#0f172a;
+margin-bottom:10px;
+}
+
+.subtitle{
+color:#2563eb;
+font-weight:700;
+letter-spacing:1px;
+text-transform:uppercase;
+margin-bottom:10px;
+}
+
+.affiliation{
+font-size:1.2rem;
+font-style:italic;
+color:#475569;
+margin-bottom:20px;
+}
+
+.tag-container{
+margin-top:20px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.tag{
+background:#dbeafe;
+color:#1d4ed8;
+padding:8px 15px;
+border-radius:50px;
+font-size:.9rem;
+font-weight:600;
+}
+
+.btns{
+margin-top:25px;
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:12px 20px;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+}
+
+.primary{
+background:#2563eb;
+color:white;
+}
+
+.secondary{
+background:#e2e8f0;
+color:#0f172a;
+}
+
 section{
-    max-width:1000px;
-    margin:auto;
-    padding:40px 20px;
+padding:60px 0;
 }
+
+.section-title{
+font-size:2rem;
+margin-bottom:30px;
+color:#0f172a;
+font-weight:800;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
 .card{
-    background:white;
-    padding:20px;
-    margin:15px 0;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.06);
+border-top:4px solid #2563eb;
 }
-h1,h2{
-    margin-bottom:10px;
+
+.card h3{
+margin-bottom:15px;
+color:#0f172a;
 }
+
+.pub{
+background:white;
+padding:25px;
+border-radius:20px;
+margin-bottom:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+border-left:5px solid #2563eb;
+}
+
+.pub h4{
+margin-bottom:10px;
+}
+
+.timeline{
+background:white;
+padding:25px;
+margin-bottom:20px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
 footer{
-    text-align:center;
-    padding:30px;
-    background:#0f172a;
-    color:white;
+background:#0f172a;
+color:white;
+text-align:center;
+padding:40px 20px;
+margin-top:60px;
 }
+
+@media(max-width:900px){
+
+.hero-card{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:2.2rem;
+}
+
+.nav-links{
+display:none;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
+<nav>
+<div class="container nav-container">
 
-<img src="profile.jpg"
-     alt="Kundan Mukhia"
-     width="180"
-     style="border-radius:50%; margin-bottom:20px;">
+<div class="logo">Kundan Mukhia</div>
+
+<div class="nav-links">
+<a href="#research">Research</a>
+<a href="#publications">Publications</a>
+<a href="#projects">Projects</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
+</nav>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-card">
+
+<img src="profile.jpg" class="profile-img">
+
+<div class="hero-text">
+
+<div class="subtitle">
+PhD Research Scholar · Complex Systems & Financial Physics
+</div>
+
 <h1>Kundan Mukhia</h1>
-<h3>PhD Scholar · Complex Systems & Econophysics</h3>
-<p>Department of Physics, National Institute of Technology Sikkim</p>
-</header>
 
-<section>
-
-<h2>About Me</h2>
-
-<div class="card">
-I am a PhD scholar at NIT Sikkim working on complex systems,
-cryptocurrency markets, stablecoin dynamics, network science,
-and machine learning applications in finance.
+<div class="affiliation">
+Department of Physics, National Institute of Technology Sikkim
 </div>
 
-<h2>Research Interests</h2>
+<p>
+I am a PhD Research Scholar working at the intersection of
+Complex Systems, Econophysics, Blockchain Analytics,
+Cryptocurrency Markets, Network Science and Machine Learning.
+My research focuses on systemic risk, financial market crashes,
+stablecoin dynamics, token ecosystems and early-warning signals
+in complex financial systems.
+</p>
 
-<div class="card">
-• Complex Systems<br>
-• Econophysics<br>
-• Cryptocurrency Markets<br>
-• Stablecoin Dynamics<br>
-• Network Science<br>
-• Machine Learning
+<div class="tag-container">
+
+<span class="tag">Complex Networks</span>
+<span class="tag">Stablecoins</span>
+<span class="tag">Blockchain Analytics</span>
+<span class="tag">Cryptocurrency Markets</span>
+<span class="tag">Econophysics</span>
+<span class="tag">Machine Learning</span>
+
 </div>
 
-<h2>Publications</h2>
+<div class="btns">
 
-<div class="card">
-Add your published papers here.
+<a class="btn primary"
+href="https://scholar.google.com/citations?user=OsnvHPMAAAAJ&hl=en"
+target="_blank">
+Google Scholar
+</a>
+
+<a class="btn secondary"
+href="https://orcid.org/0009-0001-5887-0047"
+target="_blank">
+ORCID
+</a>
+
+<a class="btn secondary"
+href="cv.pdf">
+Download CV
+</a>
+
 </div>
 
-<h2>Projects</h2>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="research">
+
+<div class="container">
+
+<h2 class="section-title">Research Interests</h2>
+
+<div class="grid">
 
 <div class="card">
-Stablecoin Market Dynamics Around the 2024 US Election
+<h3>Complex Systems</h3>
+<p>Collective behavior, emergence, market dynamics and systemic risk in large-scale financial systems.</p>
 </div>
 
 <div class="card">
-Network Analysis of Cryptocurrency Ecosystems
+<h3>Blockchain Analytics</h3>
+<p>ERC20 networks, smart contracts, transaction structures and token ecosystem analysis.</p>
 </div>
 
-<h2>Education</h2>
-
 <div class="card">
-PhD in Physics<br>
-National Institute of Technology Sikkim<br>
-2022 – Present
+<h3>Cryptocurrency Markets</h3>
+<p>Market crashes, volatility transmission, stablecoins and investor behavior.</p>
 </div>
 
-<h2>Contact</h2>
+<div class="card">
+<h3>Network Science</h3>
+<p>Community detection, core-periphery structures, mutual information networks and market topology.</p>
+</div>
 
 <div class="card">
-Email: phph220026@nitsikkim.ac.in
+<h3>Machine Learning</h3>
+<p>Data-driven methods and predictive modeling for financial systems.</p>
+</div>
+
+<div class="card">
+<h3>Financial Physics</h3>
+<p>Statistical mechanics approaches to market complexity and financial stability.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="publications">
+
+<div class="container">
+
+<h2 class="section-title">Selected Publications</h2>
+
+<div class="pub">
+<h4>Complex Network Analysis of Cryptocurrency Market During Crashes</h4>
+<p>Physica A: Statistical Mechanics and its Applications (Elsevier)</p>
+</div>
+
+<div class="pub">
+<h4>Universal Patterns in the Blockchain: Analysis of EOAs and Smart Contracts in ERC20 Token Networks</h4>
+<p>arXiv Preprint</p>
+</div>
+
+<div class="pub">
+<h4>Early-Warning Signals of Political Risk in Stablecoin Markets</h4>
+<p>arXiv Preprint</p>
+</div>
+
+<div class="pub">
+<h4>Core-Periphery Dynamics in Market-Conditioned Financial Networks</h4>
+<p>arXiv Preprint</p>
+</div>
+
+<div class="pub">
+<h4>Structural Dynamics of G5 Stock Markets During Exogenous Shocks</h4>
+<p>arXiv Preprint</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<div class="container">
+
+<h2 class="section-title">Research Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Stablecoin Dynamics</h3>
+<p>Political risk and behavioral changes surrounding the 2024 US Election.</p>
+</div>
+
+<div class="card">
+<h3>ERC20 Token Networks</h3>
+<p>Large-scale blockchain network structure and smart-contract interactions.</p>
+</div>
+
+<div class="card">
+<h3>Financial Market Networks</h3>
+<p>Core-periphery structures and market complexity analysis.</p>
+</div>
+
+<div class="card">
+<h3>Random Matrix Theory</h3>
+<p>Detecting structural changes in global financial markets.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="education">
+
+<div class="container">
+
+<h2 class="section-title">Education</h2>
+
+<div class="timeline">
+<h3>PhD in Physics</h3>
+<p>National Institute of Technology Sikkim</p>
+<p>2022 – Present</p>
+</div>
+
+<div class="timeline">
+<h3>M.Sc. Physics</h3>
+<p>Sikkim University</p>
+</div>
+
+<div class="timeline">
+<h3>B.Sc. Physics</h3>
+<p>Sikkim Government College</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="timeline">
+
+<p><strong>Email:</strong> phph220026@nitsikkim.ac.in</p>
+
+<p><strong>GitHub:</strong>
+https://github.com/phph220026-gif
+</p>
+
+<p><strong>Google Scholar:</strong>
+https://scholar.google.com/citations?user=OsnvHPMAAAAJ
+</p>
+
+<p><strong>ORCID:</strong>
+https://orcid.org/0009-0001-5887-0047
+</p>
+
+</div>
+
 </div>
 
 </section>
 
 <footer>
+
+<h3>Kundan Mukhia</h3>
+
+<p>
+Complex Systems • Econophysics • Blockchain Analytics
+</p>
+
+<p style="margin-top:10px;">
 © 2026 Kundan Mukhia
+</p>
+
 </footer>
 
 </body>
